@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	// Koffeeco
+	// Design and Developed by Mangalam Kallo - 2021
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Checkout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <EditText
+            android:id="@+id/customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint=" Your good name please"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColorHint="#808080"
+            android:textColor="#210D08"
+            android:backgroundTint="#808080"
+            android:inputType="textCapWords"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="EXTRAS"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColor="#808080"
+            android:textAllCaps="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <CheckBox
+            android:id="@+id/chocolate_muffins_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="Chocolate Muffins"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColor="#210D08"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/cinnamon_cookies_checkbox"
+            android:layout_below="@id/chocolate_muffins_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="Cinnamon Cookies"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColor="#210D08"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/belgian_wafflles_checkbox"
+            android:layout_below="@id/cinnamon_cookies_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:text="Belgian Waffles"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColor="#210D08"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_toRightOf="@id/cinnamon_cookies_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/coffee_astronaut"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Order Summary"
+            android:fontFamily="@font/raleway_semibold"
+            android:textColor="#808080"
+            android:textAllCaps="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/order_summarry_coffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:layout_weight="5"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="0dp"
+                    android:padding="8dp"
+                    android:textColor="#210d08"/>
+
+                <TextView
+                    android:id="@+id/order_summarry_coffee_prices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:textColor="#8bb3a0"/>
+
+            </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4CAF6D"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total :"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#808080"
+                android:textSize="24dp"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/total_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" 00"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#4CAF6D"
+            android:onClick="submitOrder"
+            android:text="Confirm order" />
+
+        <TextView
+            android:id="@+id/order_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© Mangalam Kallo | 2021"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

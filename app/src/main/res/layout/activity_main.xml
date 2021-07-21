@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	// Koffeeco
+	// Design and Developed by Mangalam Kallo - 2021
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/koffeeco_cover"
+            android:layout_width="match_parent"
+            android:layout_height="196.5dp"
+            android:src="@drawable/koffeeco_display2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Menu"
+            android:fontFamily="@font/raleway_semibold"
+            android:drawableStart="@drawable/ic_baseline_view_list_24"
+            android:textSize="22sp"
+            android:textColor="#808080"
+            android:layout_gravity="center"/>
+
+        // creates row 1
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                // Left Card of Row 1
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    // Left Container Elements
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        // Cappuccino Headings)
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/cappuccino_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="8dp"
+                                android:text="Cappuccino"
+                                android:textColor="#210D08"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cappuccino_heading"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/raleway_medium_italic"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="8dp"
+                                android:text="Hot Shot"
+                                android:textColor="#808080"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/coffee_image_1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="₹60"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="#210D08"
+                            android:textSize="16sp" />
+
+
+                        // Cappuccino Buttons
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <Button
+                                android:id="@+id/cappuccino_minus"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="-"
+                                android:textSize="20sp"
+                                android:onClick="minusCappuccino"/>
+
+                            <TextView
+                                android:id="@+id/cappuccino_qty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:text="0"
+                                android:textColor="#7F7F7F"
+                                android:textAllCaps="true"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/cappuccino_add"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="+"
+                                android:textSize="20sp"
+                                android:onClick="addCappuccino"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                // Right Card of Row 1
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    // Right Container Elements
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        // Expresso Headings
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/expresso_heading"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/raleway_semibold"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="8dp"
+                                android:text="Espresso"
+                                android:textColor="#210D08"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/expresso_heading"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/raleway_medium_italic"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="8dp"
+                                android:text="Hot Shot"
+                                android:textColor="#808080"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                        // Expresso Image
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:src="@drawable/coffee_image_2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="₹75"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="#210D08"
+                            android:textSize="16sp" />
+
+
+                        // Expresso Buttons
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <Button
+                                android:id="@+id/expresso_minus"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="-"
+                                android:textSize="20sp"
+                                android:onClick="minusExpresso"/>
+
+                            <TextView
+                                android:id="@+id/expresso_qty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:text="0"
+                                android:textColor="#7F7F7F"
+                                android:textAllCaps="true"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/expresso_add"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:text="+"
+                                android:textSize="20sp"
+                                android:onClick="addExpresso"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+            // Row End
+        </LinearLayout>
+
+
+
+        // creates row 2
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            // Left Card of Row 2
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                // Left Container Elements
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    // Latte Headings
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/latte_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Latte"
+                            android:textColor="#210D08"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/latte_heading"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/raleway_medium_italic"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Hot Shot"
+                            android:textColor="#808080"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/coffee_image_3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:text="₹90"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#210D08"
+                        android:textSize="16sp" />
+
+
+                    // Latte Buttons
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/latte_minus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:onClick="minusLatte"/>
+
+                        <TextView
+                            android:id="@+id/latte_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="0"
+                            android:textColor="#7F7F7F"
+                            android:textAllCaps="true"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/latte_add"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:onClick="addLatte"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            // Right Card of Row 2
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                // Right Container Elements
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    // Mocha Headings
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mocha_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Mocha"
+                            android:textColor="#210D08"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mocha_heading"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/raleway_medium_italic"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Cold Brew"
+                            android:textColor="#808080"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    // Mocha Image
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/coffee_image_4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:text="₹120"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#210D08"
+                        android:textSize="16sp" />
+
+
+                    // Mocha Buttons
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/mocha_minus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:onClick="minusMocha"/>
+
+                        <TextView
+                            android:id="@+id/mocha_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="0"
+                            android:textColor="#7F7F7F"
+                            android:textAllCaps="true"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/mocha_add"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:onClick="addMocha"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            // Row End
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"/>
+
+        // creates row 3
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            // Left Card of Row 3
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                // Left Container Elements
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    // Frappuccino Headings
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/frappuccino_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Frappuccino"
+                            android:textColor="#210D08"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/frappuccino_heading"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/raleway_medium_italic"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Cold Brew"
+                            android:textColor="#808080"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/coffee_image_5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:text="₹120"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#210D08"
+                        android:textSize="16sp" />
+
+
+                    // Frappuccino Buttons
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/frappuccino_minus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:onClick="minusFrappuccino"/>
+
+                        <TextView
+                            android:id="@+id/frappuccino_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="0"
+                            android:textColor="#7F7F7F"
+                            android:textAllCaps="true"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/frappuccino_add"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:onClick="addFrappuccino"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            // Right Card of Row 3
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                // Right Container Elements
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    // Americano Headings
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/americano_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Americano"
+                            android:textColor="#210D08"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/americano_heading"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/raleway_medium_italic"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="8dp"
+                            android:text="Classic Hot"
+                            android:textColor="#808080"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    // Ameicano Image
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/coffee_image_6" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="8dp"
+                        android:text="₹80"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#210D08"
+                        android:textSize="16sp" />
+
+
+                    // Americano Buttons
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/americano_minus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="-"
+                            android:textSize="20sp"
+                            android:onClick="minusAmericano"/>
+
+                        <TextView
+                            android:id="@+id/americano_qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="0"
+                            android:textColor="#7F7F7F"
+                            android:textAllCaps="true"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/americano_add"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="+"
+                            android:textSize="20sp"
+                            android:onClick="addAmericano"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            // Row End
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Tap to Order"
+        android:backgroundTint="@color/black"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
